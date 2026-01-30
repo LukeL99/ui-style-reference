@@ -611,10 +611,10 @@ const VibrantDemo = ({ }: StyleDemoProps) => (
 // 7. DARK MODE (OLED) - "NightCode" Developer Tools
 // ============================================================================
 const DarkModeDemo = ({ }: StyleDemoProps) => (
-  <div className="min-h-screen pt-16 bg-black">
+  <div className="min-h-screen pt-16 bg-black overflow-x-hidden">
     {/* Hero */}
-    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-16">
-      <nav className="flex justify-between items-center mb-16">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8 sm:py-16">
+      <nav className="flex justify-between items-center mb-8 sm:mb-16">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg flex items-center justify-center" 
             style={{ background: '#39FF14', boxShadow: '0 0 20px rgba(57, 255, 20, 0.5)' }}>
@@ -629,20 +629,20 @@ const DarkModeDemo = ({ }: StyleDemoProps) => (
         </div>
       </nav>
 
-      <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+      <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
         Code in the dark.<br />
         <span style={{ color: '#39FF14', textShadow: '0 0 30px rgba(57,255,20,0.5)' }}>Ship at light speed.</span>
       </h1>
-      <p className="text-xl text-gray-400 max-w-2xl mb-8">
+      <p className="text-lg sm:text-xl text-gray-400 max-w-2xl mb-8">
         The IDE that respects your eyes and your craft. True black OLED themes, 
         zero distractions, maximum productivity.
       </p>
-      <div className="flex gap-4">
-        <button className="px-8 py-4 rounded-lg font-semibold text-black"
+      <div className="flex flex-col sm:flex-row gap-4">
+        <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-black"
           style={{ background: '#39FF14', boxShadow: '0 0 30px rgba(57,255,20,0.3)' }}>
           Download Free
         </button>
-        <button className="px-8 py-4 rounded-lg font-semibold text-white border border-gray-700 hover:border-gray-500 transition-colors">
+        <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-white border border-gray-700 hover:border-gray-500 transition-colors">
           View Docs
         </button>
       </div>
@@ -1167,10 +1167,10 @@ const RetroFuturismDemo = ({ }: StyleDemoProps) => (
 // 12. FLAT DESIGN - "Taskr" Productivity App
 // ============================================================================
 const FlatDesignDemo = ({ }: StyleDemoProps) => (
-  <div className="min-h-screen pt-16 bg-gray-100">
+  <div className="min-h-screen pt-16 bg-gray-100 overflow-x-hidden">
     {/* Header */}
     <header className="bg-white border-b border-gray-200">
-      <div className="max-w-5xl mx-auto px-6 py-4">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4">
         <nav className="flex justify-between items-center">
           <div className="flex items-center gap-2">
             <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
@@ -1178,7 +1178,7 @@ const FlatDesignDemo = ({ }: StyleDemoProps) => (
             </div>
             <span className="text-xl font-bold text-gray-800">Taskr</span>
           </div>
-          <div className="flex gap-4">
+          <div className="hidden sm:flex gap-4 items-center">
             {['Features', 'Pricing', 'Blog'].map((item) => (
               <a key={item} href="#" className="text-gray-600 hover:text-blue-500 transition-colors">{item}</a>
             ))}
@@ -1190,8 +1190,8 @@ const FlatDesignDemo = ({ }: StyleDemoProps) => (
 
     {/* Hero */}
     <section className="bg-white border-b border-gray-200">
-      <div className="max-w-5xl mx-auto px-6 py-20 text-center">
-        <h1 className="text-5xl font-bold text-gray-800 mb-6">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-20 text-center">
+        <h1 className="text-3xl sm:text-5xl font-bold text-gray-800 mb-6">
           Get things done.<br />Simply.
         </h1>
         <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
