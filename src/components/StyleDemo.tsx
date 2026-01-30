@@ -601,16 +601,13 @@ const VibrantDemo = ({ }: StyleDemoProps) => (
       <h2 className="text-5xl font-black text-white mb-12">Selected Work</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {[
-          { client: 'HYPEBEAST', type: 'Brand Campaign', color: '#FF1493' },
-          { client: 'NEON LABS', type: 'Website', color: '#00FFFF' },
-          { client: 'PULSE MUSIC', type: 'App Design', color: '#39FF14' },
-          { client: 'FUSION', type: 'Identity', color: '#BF00FF' },
+          { client: 'HYPEBEAST', type: 'Brand Campaign', image: '/images/portfolio-hypebeast.png' },
+          { client: 'NEON LABS', type: 'Website', image: '/images/portfolio-neonlabs.png' },
+          { client: 'PULSE MUSIC', type: 'App Design', image: '/images/portfolio-pulse.png' },
+          { client: 'FUSION', type: 'Identity', image: '/images/portfolio-fusion.png' },
         ].map((work, i) => (
-          <div key={i} className="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer"
-            style={{ backgroundColor: work.color }}>
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-6xl opacity-30">◆</span>
-            </div>
+          <div key={i} className="group relative overflow-hidden rounded-3xl aspect-video cursor-pointer">
+            <img src={work.image} alt={work.client} className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent">
               <p className="text-white/70 text-sm">{work.type}</p>
               <h3 className="text-2xl font-black text-white">{work.client}</h3>
@@ -1018,15 +1015,15 @@ const AuroraDemo = ({ }: StyleDemoProps) => (
         <h2 className="text-2xl font-bold text-white mb-6">Featured Playlists</h2>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {[
-            { title: 'Chill Vibes', tracks: '50 tracks', gradient: 'from-purple-600 to-pink-500' },
-            { title: 'Focus Flow', tracks: '40 tracks', gradient: 'from-blue-600 to-cyan-500' },
-            { title: 'Energy Boost', tracks: '35 tracks', gradient: 'from-orange-500 to-red-500' },
-            { title: 'Late Night', tracks: '45 tracks', gradient: 'from-indigo-600 to-purple-600' },
+            { title: 'Chill Vibes', tracks: '50 tracks', image: '/images/album-chill-vibes.png' },
+            { title: 'Focus Flow', tracks: '40 tracks', image: '/images/album-focus-flow.png' },
+            { title: 'Energy Boost', tracks: '35 tracks', image: '/images/album-energy-boost.png' },
+            { title: 'Late Night', tracks: '45 tracks', image: '/images/album-late-night.png' },
           ].map((playlist, i) => (
             <div key={i} className="group cursor-pointer">
-              <div className={`aspect-square rounded-2xl bg-gradient-to-br ${playlist.gradient} mb-4 flex items-center justify-center group-hover:scale-105 transition-transform`}
+              <div className="aspect-square rounded-2xl mb-4 overflow-hidden group-hover:scale-105 transition-transform"
                 style={{ boxShadow: '0 20px 40px rgba(0,0,0,0.3)' }}>
-                <span className="text-6xl opacity-80">🎵</span>
+                <img src={playlist.image} alt={playlist.title} className="w-full h-full object-cover" />
               </div>
               <h3 className="font-semibold text-white">{playlist.title}</h3>
               <p className="text-white/60 text-sm">{playlist.tracks}</p>
@@ -3551,7 +3548,13 @@ const InteractiveCursorDemo = ({ }: StyleDemoProps) => (
     <main className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-24">
       <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8 leading-tight">
         We create<br />
-        <span className="text-transparent" style={{ WebkitTextStroke: '2px white' }}>experiences</span><br />
+        <span 
+          className="text-gray-900"
+          style={{ 
+            textShadow: `-1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff,
+                         -2px 0 0 #fff, 2px 0 0 #fff, 0 -2px 0 #fff, 0 2px 0 #fff`
+          }}
+        >experiences</span><br />
         that matter
       </h1>
       <p className="text-xl text-gray-400 max-w-xl mb-12">
