@@ -225,22 +225,31 @@ const GlassmorphismDemo = ({ }: StyleDemoProps) => (
     {/* Content */}
     <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-8 py-8 sm:py-12">
       {/* Header */}
-      <header className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mb-8 sm:mb-12">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-xl flex items-center justify-center"
-            style={{
-              background: 'rgba(255, 255, 255, 0.2)',
-              backdropFilter: 'blur(10px)',
-            }}>
-            <span className="text-white text-xl">◈</span>
-          </div>
-          <span className="text-white text-lg sm:text-xl font-semibold">Prism Finance</span>
-        </div>
-        <nav className="flex flex-wrap gap-3 sm:gap-6 text-sm sm:text-base">
-          {['Dashboard', 'Portfolio', 'Analytics', 'Settings'].map((item) => (
-            <a key={item} href="#" className="text-white/80 hover:text-white transition-colors">{item}</a>
-          ))}
-        </nav>
+      <header className="mb-8 sm:mb-12">
+        <MobileNav
+          logo={
+            <div className="flex items-center gap-3">
+              <div className="w-10 h-10 rounded-xl flex items-center justify-center"
+                style={{
+                  background: 'rgba(255, 255, 255, 0.2)',
+                  backdropFilter: 'blur(10px)',
+                }}>
+                <span className="text-white text-xl">◈</span>
+              </div>
+              <span className="text-white text-lg sm:text-xl font-semibold">Prism Finance</span>
+            </div>
+          }
+          items={[
+            { label: 'Dashboard' },
+            { label: 'Portfolio' },
+            { label: 'Analytics' },
+            { label: 'Settings' },
+          ]}
+          hamburgerColor="white"
+          menuBg="bg-white/20 backdrop-blur-xl"
+          menuText="text-white"
+          desktopItemClass="text-white/80 hover:text-white"
+        />
       </header>
 
       {/* Main Grid */}
@@ -356,14 +365,20 @@ const BrutalismDemo = ({ }: StyleDemoProps) => (
     {/* Hero */}
     <header className="border-b-4 border-black">
       <div className="max-w-6xl mx-auto p-8">
-        <nav className="flex justify-between items-center mb-16">
-          <span className="text-2xl font-black">RAWFORM.</span>
-          <div className="flex gap-6 font-mono uppercase text-sm">
-            {['Work', 'About', 'Contact'].map((item) => (
-              <a key={item} href="#" className="hover:line-through">{item}</a>
-            ))}
-          </div>
-        </nav>
+        <div className="mb-16">
+          <MobileNav
+            logo={<span className="text-2xl font-black">RAWFORM.</span>}
+            items={[
+              { label: 'Work' },
+              { label: 'About' },
+              { label: 'Contact' },
+            ]}
+            hamburgerColor="black"
+            menuBg="bg-white"
+            menuText="text-black font-mono uppercase text-sm"
+            desktopItemClass="font-mono uppercase text-sm hover:line-through"
+          />
+        </div>
         <h1 className="text-6xl md:text-[120px] font-black uppercase leading-none tracking-tight mb-8">
           Design<br />Without<br />Apology.
         </h1>
@@ -534,14 +549,21 @@ const VibrantDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16" style={{ background: '#0D0D0D' }}>
     {/* Hero */}
     <header className="max-w-6xl mx-auto px-8 py-16">
-      <nav className="flex justify-between items-center mb-16">
-        <span className="text-3xl font-black text-white">VOLTAIC</span>
-        <div className="hidden sm:flex gap-6 text-gray-400">
-          {['Work', 'About', 'Careers', 'Contact'].map((item) => (
-            <a key={item} href="#" className="hover:text-white transition-colors">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <div className="mb-16">
+        <MobileNav
+          logo={<span className="text-3xl font-black text-white">VOLTAIC</span>}
+          items={[
+            { label: 'Work' },
+            { label: 'About' },
+            { label: 'Careers' },
+            { label: 'Contact' },
+          ]}
+          hamburgerColor="white"
+          menuBg="bg-zinc-900"
+          menuText="text-gray-200"
+          desktopItemClass="text-gray-400 hover:text-white"
+        />
+      </div>
       
       <h1 className="text-6xl md:text-8xl font-black text-white mb-8 leading-tight">
         We make<br />
@@ -615,20 +637,29 @@ const DarkModeDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16 overflow-x-hidden bg-black overflow-x-hidden">
     {/* Hero */}
     <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8 sm:py-16">
-      <nav className="flex justify-between items-center mb-8 sm:mb-16">
-        <div className="flex items-center gap-2">
-          <div className="w-8 h-8 rounded-lg flex items-center justify-center" 
-            style={{ background: '#39FF14', boxShadow: '0 0 20px rgba(57, 255, 20, 0.5)' }}>
-            <span className="text-black font-bold">N</span>
-          </div>
-          <span className="text-white font-semibold">NightCode</span>
-        </div>
-        <div className="hidden sm:flex gap-6 text-gray-500">
-          {['Features', 'Pricing', 'Docs', 'Blog'].map((item) => (
-            <a key={item} href="#" className="hover:text-white transition-colors">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <div className="mb-8 sm:mb-16">
+        <MobileNav
+          logo={
+            <div className="flex items-center gap-2">
+              <div className="w-8 h-8 rounded-lg flex items-center justify-center" 
+                style={{ background: '#39FF14', boxShadow: '0 0 20px rgba(57, 255, 20, 0.5)' }}>
+                <span className="text-black font-bold">N</span>
+              </div>
+              <span className="text-white font-semibold">NightCode</span>
+            </div>
+          }
+          items={[
+            { label: 'Features' },
+            { label: 'Pricing' },
+            { label: 'Docs' },
+            { label: 'Blog' },
+          ]}
+          hamburgerColor="#39FF14"
+          menuBg="bg-zinc-900"
+          menuText="text-gray-200"
+          desktopItemClass="text-gray-500 hover:text-white"
+        />
+      </div>
 
       <h1 className="text-3xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
         Code in the dark.<br />
@@ -815,31 +846,30 @@ const ClaymorphismDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16 overflow-x-hidden" style={{ background: '#F0E6FA' }}>
     {/* Header */}
     <header className="max-w-5xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
-      <nav className="flex justify-between items-center">
-        <div className="flex items-center gap-2 sm:gap-3">
-          <div className="w-10 sm:w-14 h-10 sm:h-14 rounded-2xl flex items-center justify-center"
-            style={{
-              backgroundColor: '#FFD93D',
-              border: '4px solid rgba(255,255,255,0.5)',
-              boxShadow: 'inset -4px -4px 8px rgba(0,0,0,0.1), 6px 6px 12px rgba(0,0,0,0.15)'
-            }}>
-            <span className="text-2xl sm:text-3xl">🎈</span>
-          </div>
-          <span className="text-xl sm:text-2xl font-bold text-gray-700">LearnPlay</span>
-        </div>
-        <div className="hidden sm:flex gap-4">
-          {['Games', 'Stories', 'Music'].map((item) => (
-            <button key={item} className="px-5 py-2 rounded-xl font-medium text-gray-600"
+      <MobileNav
+        logo={
+          <div className="flex items-center gap-2 sm:gap-3">
+            <div className="w-10 sm:w-14 h-10 sm:h-14 rounded-2xl flex items-center justify-center"
               style={{
-                backgroundColor: '#F0E6FA',
-                border: '3px solid rgba(255,255,255,0.5)',
-                boxShadow: 'inset -2px -2px 4px rgba(0,0,0,0.05), 4px 4px 8px rgba(0,0,0,0.1)'
+                backgroundColor: '#FFD93D',
+                border: '4px solid rgba(255,255,255,0.5)',
+                boxShadow: 'inset -4px -4px 8px rgba(0,0,0,0.1), 6px 6px 12px rgba(0,0,0,0.15)'
               }}>
-              {item}
-            </button>
-          ))}
-        </div>
-      </nav>
+              <span className="text-2xl sm:text-3xl">🎈</span>
+            </div>
+            <span className="text-xl sm:text-2xl font-bold text-gray-700">LearnPlay</span>
+          </div>
+        }
+        items={[
+          { label: 'Games' },
+          { label: 'Stories' },
+          { label: 'Music' },
+        ]}
+        hamburgerColor="#6B7280"
+        menuBg="bg-purple-50"
+        menuText="text-gray-700 font-medium"
+        desktopItemClass="px-5 py-2 rounded-xl font-medium text-gray-600"
+      />
     </header>
 
     {/* Hero */}
@@ -945,17 +975,24 @@ const AuroraDemo = ({ }: StyleDemoProps) => (
     <div className="relative z-10">
       {/* Header */}
       <header className="max-w-6xl mx-auto px-8 py-6">
-        <nav className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <span className="text-2xl">🌊</span>
-            <span className="text-xl font-bold text-white">Wavelength</span>
-          </div>
-          <div className="flex gap-6 text-white/80">
-            {['Browse', 'Library', 'Radio', 'Premium'].map((item) => (
-              <a key={item} href="#" className="hover:text-white transition-colors">{item}</a>
-            ))}
-          </div>
-        </nav>
+        <MobileNav
+          logo={
+            <div className="flex items-center gap-2">
+              <span className="text-2xl">🌊</span>
+              <span className="text-xl font-bold text-white">Wavelength</span>
+            </div>
+          }
+          items={[
+            { label: 'Browse' },
+            { label: 'Library' },
+            { label: 'Radio' },
+            { label: 'Premium' },
+          ]}
+          hamburgerColor="white"
+          menuBg="bg-purple-900/90 backdrop-blur-lg"
+          menuText="text-white"
+          desktopItemClass="text-white/80 hover:text-white"
+        />
       </header>
 
       {/* Hero */}
@@ -1064,19 +1101,26 @@ const RetroFuturismDemo = ({ }: StyleDemoProps) => (
     <div className="relative z-10">
       {/* Header */}
       <header className="max-w-6xl mx-auto px-8 py-8">
-        <nav className="flex justify-between items-center">
-          <h1 className="text-3xl font-bold" style={{ 
-            color: '#FF006E',
-            textShadow: '0 0 10px #FF006E, 0 0 20px #FF006E'
-          }}>
-            NEON DRIVE
-          </h1>
-          <div className="hidden sm:flex gap-8 font-mono uppercase text-sm tracking-widest">
-            {['Tracks', 'Artists', 'Events', 'Shop'].map((item) => (
-              <a key={item} href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors">{item}</a>
-            ))}
-          </div>
-        </nav>
+        <MobileNav
+          logo={
+            <h1 className="text-3xl font-bold" style={{ 
+              color: '#FF006E',
+              textShadow: '0 0 10px #FF006E, 0 0 20px #FF006E'
+            }}>
+              NEON DRIVE
+            </h1>
+          }
+          items={[
+            { label: 'Tracks' },
+            { label: 'Artists' },
+            { label: 'Events' },
+            { label: 'Shop' },
+          ]}
+          hamburgerColor="#22D3EE"
+          menuBg="bg-slate-900/95"
+          menuText="text-cyan-400 font-mono uppercase text-sm tracking-widest"
+          desktopItemClass="font-mono uppercase text-sm tracking-widest text-cyan-400 hover:text-cyan-300"
+        />
       </header>
 
       {/* Hero */}
@@ -1175,20 +1219,26 @@ const FlatDesignDemo = ({ }: StyleDemoProps) => (
     {/* Header */}
     <header className="bg-white border-b border-gray-200">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 py-4">
-        <nav className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white text-xl">✓</span>
+        <MobileNav
+          logo={
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 bg-blue-500 rounded-lg flex items-center justify-center">
+                <span className="text-white text-xl">✓</span>
+              </div>
+              <span className="text-xl font-bold text-gray-800">Taskr</span>
             </div>
-            <span className="text-xl font-bold text-gray-800">Taskr</span>
-          </div>
-          <div className="hidden sm:flex gap-4 items-center">
-            {['Features', 'Pricing', 'Blog'].map((item) => (
-              <a key={item} href="#" className="text-gray-600 hover:text-blue-500 transition-colors">{item}</a>
-            ))}
-            <button className="px-4 py-2 bg-blue-500 text-white rounded-md font-medium">Sign Up</button>
-          </div>
-        </nav>
+          }
+          items={[
+            { label: 'Features' },
+            { label: 'Pricing' },
+            { label: 'Blog' },
+            { label: 'Sign Up' },
+          ]}
+          hamburgerColor="#3B82F6"
+          menuBg="bg-white"
+          menuText="text-gray-800"
+          desktopItemClass="text-gray-600 hover:text-blue-500"
+        />
       </div>
     </header>
 
@@ -1396,21 +1446,30 @@ const LiquidGlassDemo = ({ }: StyleDemoProps) => (
     {/* Content */}
     <div className="relative z-10 max-w-6xl mx-auto px-8 py-12">
       {/* Header */}
-      <header className="flex justify-between items-center mb-16">
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 rounded-full"
-            style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1))',
-              backdropFilter: 'blur(10px)',
-              border: '1px solid rgba(255,255,255,0.3)'
-            }} />
-          <span className="text-xl font-semibold text-white">Fluid</span>
-        </div>
-        <nav className="flex gap-6 text-white/80">
-          {['Product', 'Pricing', 'Docs', 'Blog'].map((item) => (
-            <a key={item} href="#" className="hover:text-white transition-colors">{item}</a>
-          ))}
-        </nav>
+      <header className="mb-16">
+        <MobileNav
+          logo={
+            <div className="flex items-center gap-2">
+              <div className="w-10 h-10 rounded-full"
+                style={{
+                  background: 'linear-gradient(135deg, rgba(255,255,255,0.3), rgba(255,255,255,0.1))',
+                  backdropFilter: 'blur(10px)',
+                  border: '1px solid rgba(255,255,255,0.3)'
+                }} />
+              <span className="text-xl font-semibold text-white">Fluid</span>
+            </div>
+          }
+          items={[
+            { label: 'Product' },
+            { label: 'Pricing' },
+            { label: 'Docs' },
+            { label: 'Blog' },
+          ]}
+          hamburgerColor="white"
+          menuBg="bg-white/20 backdrop-blur-xl"
+          menuText="text-white"
+          desktopItemClass="text-white/80 hover:text-white"
+        />
       </header>
 
       {/* Hero */}
@@ -1513,14 +1572,19 @@ const MotionDrivenDemo = ({ }: StyleDemoProps) => (
 
     {/* Header */}
     <header className="max-w-6xl mx-auto px-8 py-8">
-      <nav className="flex justify-between items-center">
-        <span className="text-2xl font-bold text-white">Kinetic</span>
-        <div className="flex gap-6 text-white/70">
-          {['Work', 'About', 'Services', 'Contact'].map((item) => (
-            <a key={item} href="#" className="hover:text-white transition-all duration-300 hover:scale-110">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={<span className="text-2xl font-bold text-white">Kinetic</span>}
+        items={[
+          { label: 'Work' },
+          { label: 'About' },
+          { label: 'Services' },
+          { label: 'Contact' },
+        ]}
+        hamburgerColor="white"
+        menuBg="bg-indigo-900/95"
+        menuText="text-white"
+        desktopItemClass="text-white/70 hover:text-white"
+      />
     </header>
 
     {/* Hero */}
@@ -2294,17 +2358,24 @@ const CyberpunkDemo = ({ }: StyleDemoProps) => (
 const OrganicBiophilicDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16" style={{ background: '#F5F5DC' }}>
     <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
-      <nav className="flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <span className="text-4xl">🌿</span>
-          <span className="text-2xl font-serif text-green-800">Willow</span>
-        </div>
-        <div className="flex gap-6">
-          {['Home', 'Garden', 'Recipes', 'Community'].map((item) => (
-            <a key={item} href="#" className="text-green-700 hover:text-green-900 transition-colors">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={
+          <div className="flex items-center gap-3">
+            <span className="text-4xl">🌿</span>
+            <span className="text-2xl font-serif text-green-800">Willow</span>
+          </div>
+        }
+        items={[
+          { label: 'Home' },
+          { label: 'Garden' },
+          { label: 'Recipes' },
+          { label: 'Community' },
+        ]}
+        hamburgerColor="#166534"
+        menuBg="bg-amber-50"
+        menuText="text-green-800"
+        desktopItemClass="text-green-700 hover:text-green-900"
+      />
     </header>
     <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16">
       <h1 className="text-5xl md:text-6xl font-serif text-green-900 mb-6 leading-tight">
@@ -2438,14 +2509,19 @@ const MemphisDemo = ({ }: StyleDemoProps) => (
     <div className="absolute bottom-40 left-1/4 w-0 h-0" style={{ borderLeft: '40px solid transparent', borderRight: '40px solid transparent', borderBottom: '70px solid #86CCCA' }} />
     <div className="absolute top-1/2 right-10 w-16 h-40" style={{ background: 'repeating-linear-gradient(45deg, #000, #000 5px, transparent 5px, transparent 10px)' }} />
     <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8 relative z-10">
-      <nav className="flex justify-between items-center">
-        <h1 className="text-4xl font-black" style={{ color: '#6A7BB4' }}>SHAPES</h1>
-        <div className="flex gap-6 font-bold">
-          {['PROGRAM', 'ARTISTS', 'TICKETS', 'INFO'].map((item) => (
-            <a key={item} href="#" className="hover:underline" style={{ textDecorationThickness: '3px' }}>{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={<h1 className="text-4xl font-black" style={{ color: '#6A7BB4' }}>SHAPES</h1>}
+        items={[
+          { label: 'PROGRAM' },
+          { label: 'ARTISTS' },
+          { label: 'TICKETS' },
+          { label: 'INFO' },
+        ]}
+        hamburgerColor="#6A7BB4"
+        menuBg="bg-amber-50"
+        menuText="text-gray-900 font-bold"
+        desktopItemClass="font-bold hover:underline"
+      />
     </header>
     <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16 relative z-10">
       <p className="font-bold text-xl mb-4" style={{ color: '#FF71CE' }}>JULY 15-18, 2025 • BROOKLYN, NY</p>
@@ -2549,17 +2625,24 @@ const VaporwaveDemo = ({ }: StyleDemoProps) => (
 const DimensionalDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16 overflow-x-hidden bg-gray-100">
     <header className="max-w-6xl mx-auto px-8 py-6">
-      <nav className="flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">L</div>
-          <span className="text-xl font-semibold text-gray-900">Layers</span>
-        </div>
-        <div className="flex gap-6">
-          {['Projects', 'Team', 'Calendar', 'Settings'].map((item) => (
-            <a key={item} href="#" className="text-gray-600 hover:text-gray-900">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={
+          <div className="flex items-center gap-2">
+            <div className="w-10 h-10 bg-indigo-600 rounded-xl flex items-center justify-center text-white font-bold shadow-lg">L</div>
+            <span className="text-xl font-semibold text-gray-900">Layers</span>
+          </div>
+        }
+        items={[
+          { label: 'Projects' },
+          { label: 'Team' },
+          { label: 'Calendar' },
+          { label: 'Settings' },
+        ]}
+        hamburgerColor="#4F46E5"
+        menuBg="bg-white"
+        menuText="text-gray-800"
+        desktopItemClass="text-gray-600 hover:text-gray-900"
+      />
     </header>
     <main className="max-w-6xl mx-auto px-8 py-8">
       <div className="relative">
@@ -2610,14 +2693,18 @@ const DimensionalDemo = ({ }: StyleDemoProps) => (
 const ExaggeratedMinimalismDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16 overflow-x-hidden bg-white">
     <header className="max-w-7xl mx-auto px-8 py-8">
-      <nav className="flex justify-between items-center">
-        <span className="text-xl tracking-widest">VOID</span>
-        <div className="hidden sm:flex gap-8 text-sm tracking-widest">
-          {['WORK', 'ABOUT', 'CONTACT'].map((item) => (
-            <a key={item} href="#" className="hover:line-through">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={<span className="text-xl tracking-widest">VOID</span>}
+        items={[
+          { label: 'WORK' },
+          { label: 'ABOUT' },
+          { label: 'CONTACT' },
+        ]}
+        hamburgerColor="black"
+        menuBg="bg-white"
+        menuText="text-black text-sm tracking-widest"
+        desktopItemClass="text-sm tracking-widest hover:line-through"
+      />
     </header>
     <main className="max-w-7xl mx-auto px-8 py-24">
       <h1 className="text-[12vw] font-black leading-[0.85] tracking-tight text-black mb-24">
@@ -2663,14 +2750,18 @@ const KineticTypographyDemo = ({ }: StyleDemoProps) => (
       .marquee { animation: slide 20s linear infinite; }
     `}</style>
     <header className="max-w-6xl mx-auto px-8 py-8">
-      <nav className="flex justify-between items-center">
-        <span className="text-2xl font-bold">MOTION</span>
-        <div className="flex gap-6">
-          {['Work', 'About', 'Contact'].map((item) => (
-            <a key={item} href="#" className="hover:opacity-50">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={<span className="text-2xl font-bold">MOTION</span>}
+        items={[
+          { label: 'Work' },
+          { label: 'About' },
+          { label: 'Contact' },
+        ]}
+        hamburgerColor="white"
+        menuBg="bg-zinc-900"
+        menuText="text-white"
+        desktopItemClass="hover:opacity-50"
+      />
     </header>
     <section className="py-24 overflow-hidden">
       <div className="whitespace-nowrap marquee">
@@ -2775,19 +2866,20 @@ const ParallaxDemo = ({ }: StyleDemoProps) => (
 const SwissModernism2Demo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16 overflow-x-hidden bg-white">
     <header className="max-w-6xl mx-auto px-8 py-8 border-b border-gray-200">
-      <nav className="grid grid-cols-12 gap-4 items-center">
-        <div className="col-span-2">
-          <span className="text-2xl font-bold tracking-tight">ratio.</span>
-        </div>
-        <div className="col-span-8 flex justify-center gap-8">
-          {['Components', 'Guidelines', 'Resources', 'Changelog'].map((item) => (
-            <a key={item} href="#" className="text-gray-600 hover:text-black transition-colors">{item}</a>
-          ))}
-        </div>
-        <div className="col-span-2 text-right">
-          <button className="px-4 py-2 bg-black text-white text-sm">Get Started</button>
-        </div>
-      </nav>
+      <MobileNav
+        logo={<span className="text-2xl font-bold tracking-tight">ratio.</span>}
+        items={[
+          { label: 'Components' },
+          { label: 'Guidelines' },
+          { label: 'Resources' },
+          { label: 'Changelog' },
+          { label: 'Get Started' },
+        ]}
+        hamburgerColor="black"
+        menuBg="bg-white"
+        menuText="text-gray-800"
+        desktopItemClass="text-gray-600 hover:text-black"
+      />
     </header>
     <main className="max-w-6xl mx-auto px-8 py-16">
       <div className="grid grid-cols-12 gap-8">
@@ -2907,14 +2999,18 @@ const PixelArtDemo = ({ }: StyleDemoProps) => (
       .pixel-border { box-shadow: 4px 0 0 #FFF, -4px 0 0 #FFF, 0 4px 0 #FFF, 0 -4px 0 #FFF, 4px 4px 0 #FFF, -4px -4px 0 #FFF, 4px -4px 0 #FFF, -4px 4px 0 #FFF; }
     `}</style>
     <header className="max-w-4xl mx-auto px-8 py-8">
-      <nav className="flex justify-between items-center">
-        <h1 className="text-2xl font-bold text-yellow-400">★ 8-BIT QUEST ★</h1>
-        <div className="flex gap-6 text-sm">
-          {['PLAY', 'SHOP', 'SCORES'].map((item) => (
-            <a key={item} href="#" className="text-white hover:text-yellow-400">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={<h1 className="text-2xl font-bold text-yellow-400">★ 8-BIT QUEST ★</h1>}
+        items={[
+          { label: 'PLAY' },
+          { label: 'SHOP' },
+          { label: 'SCORES' },
+        ]}
+        hamburgerColor="#FACC15"
+        menuBg="bg-slate-900"
+        menuText="text-white text-sm"
+        desktopItemClass="text-sm text-white hover:text-yellow-400"
+      />
     </header>
     <section className="max-w-4xl mx-auto px-8 py-12 text-center">
       <div className="text-6xl mb-8">🎮</div>
@@ -3171,17 +3267,23 @@ const BiomimeticDemo = ({ }: StyleDemoProps) => (
       .breathing { animation: breathe 4s ease-in-out infinite; }
     `}</style>
     <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
-      <nav className="flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-full breathing" style={{ background: 'linear-gradient(135deg, #00FF41, #00FFFF)' }} />
-          <span className="text-xl font-medium text-white">Bloom</span>
-        </div>
-        <div className="flex gap-6">
-          {['Research', 'Platform', 'About'].map((item) => (
-            <a key={item} href="#" className="text-white/60 hover:text-white transition-colors">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={
+          <div className="flex items-center gap-3">
+            <div className="w-10 h-10 rounded-full breathing" style={{ background: 'linear-gradient(135deg, #00FF41, #00FFFF)' }} />
+            <span className="text-xl font-medium text-white">Bloom</span>
+          </div>
+        }
+        items={[
+          { label: 'Research' },
+          { label: 'Platform' },
+          { label: 'About' },
+        ]}
+        hamburgerColor="#00FF41"
+        menuBg="bg-slate-900"
+        menuText="text-white"
+        desktopItemClass="text-white/60 hover:text-white"
+      />
     </header>
     <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16 text-center">
       <div className="w-40 h-40 mx-auto mb-12 rounded-full breathing"
@@ -3354,14 +3456,18 @@ const TactileDigitalDemo = ({ }: StyleDemoProps) => (
 const NatureDistilledDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16" style={{ background: '#F5F0E1' }}>
     <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
-      <nav className="flex justify-between items-center">
-        <h1 className="text-2xl font-serif" style={{ color: '#5D4E37' }}>Terra</h1>
-        <div className="flex gap-6">
-          {['Shop', 'About', 'Journal'].map((item) => (
-            <a key={item} href="#" className="text-sm" style={{ color: '#8B7355' }}>{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={<h1 className="text-2xl font-serif" style={{ color: '#5D4E37' }}>Terra</h1>}
+        items={[
+          { label: 'Shop' },
+          { label: 'About' },
+          { label: 'Journal' },
+        ]}
+        hamburgerColor="#5D4E37"
+        menuBg="bg-amber-50"
+        menuText="text-amber-900"
+        desktopItemClass="text-sm"
+      />
     </header>
     <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16">
       <h2 className="text-5xl font-serif mb-6" style={{ color: '#5D4E37' }}>
@@ -3423,14 +3529,18 @@ const InteractiveCursorDemo = ({ }: StyleDemoProps) => (
       .reveal span { transform: translateY(100%); transition: transform 0.3s; }
     `}</style>
     <header className="max-w-6xl mx-auto px-8 py-8">
-      <nav className="flex justify-between items-center">
-        <span className="text-2xl font-bold magnetic transition-transform">STUDIO</span>
-        <div className="flex gap-8">
-          {['Work', 'About', 'Contact'].map((item) => (
-            <a key={item} href="#" className="magnetic transition-transform hover:text-pink-500">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={<span className="text-2xl font-bold magnetic transition-transform">STUDIO</span>}
+        items={[
+          { label: 'Work' },
+          { label: 'About' },
+          { label: 'Contact' },
+        ]}
+        hamburgerColor="white"
+        menuBg="bg-gray-800"
+        menuText="text-white"
+        desktopItemClass="magnetic transition-transform hover:text-pink-500"
+      />
     </header>
     <main className="max-w-6xl mx-auto px-8 py-24">
       <h1 className="text-7xl font-bold mb-8 leading-tight">
@@ -3544,14 +3654,18 @@ const VoiceFirstDemo = ({ }: StyleDemoProps) => (
 const ThreeDProductDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16" style={{ background: '#F8F8F8' }}>
     <header className="max-w-6xl mx-auto px-8 py-6">
-      <nav className="flex justify-between items-center">
-        <span className="text-2xl font-light tracking-widest">LUXE</span>
-        <div className="flex gap-6 text-sm">
-          {['Collections', 'About', 'Stores'].map((item) => (
-            <a key={item} href="#" className="text-gray-600 hover:text-black">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={<span className="text-2xl font-light tracking-widest">LUXE</span>}
+        items={[
+          { label: 'Collections' },
+          { label: 'About' },
+          { label: 'Stores' },
+        ]}
+        hamburgerColor="black"
+        menuBg="bg-white"
+        menuText="text-gray-800 text-sm"
+        desktopItemClass="text-sm text-gray-600 hover:text-black"
+      />
     </header>
     <main className="max-w-6xl mx-auto px-8 py-8">
       <div className="grid md:grid-cols-2 gap-16 items-center">
@@ -3628,14 +3742,18 @@ const GradientMeshDemo = ({ }: StyleDemoProps) => (
     <div className="absolute inset-0 backdrop-blur-3xl" style={{ background: 'rgba(255,255,255,0.1)' }} />
     <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8">
       <header className="py-8">
-        <nav className="flex justify-between items-center">
-          <span className="text-2xl font-bold text-white drop-shadow-lg">Prism</span>
-          <div className="flex gap-6">
-            {['Work', 'Services', 'Contact'].map((item) => (
-              <a key={item} href="#" className="text-white/80 hover:text-white">{item}</a>
-            ))}
-          </div>
-        </nav>
+        <MobileNav
+          logo={<span className="text-2xl font-bold text-white drop-shadow-lg">Prism</span>}
+          items={[
+            { label: 'Work' },
+            { label: 'Services' },
+            { label: 'Contact' },
+          ]}
+          hamburgerColor="white"
+          menuBg="bg-white/20 backdrop-blur-xl"
+          menuText="text-white"
+          desktopItemClass="text-white/80 hover:text-white"
+        />
       </header>
       <section className="py-24 text-center">
         <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 drop-shadow-lg">
@@ -3754,14 +3872,19 @@ const ChromaticDemo = ({ }: StyleDemoProps) => (
       .glitch-hover:hover { animation: glitch 0.3s infinite; }
     `}</style>
     <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
-      <nav className="flex justify-between items-center">
-        <h1 className="text-3xl font-black text-white rgb-text">GLITCH</h1>
-        <div className="flex gap-6">
-          {['Artists', 'Releases', 'Events', 'Shop'].map((item) => (
-            <a key={item} href="#" className="text-gray-400 hover:text-white glitch-hover">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={<h1 className="text-3xl font-black text-white rgb-text">GLITCH</h1>}
+        items={[
+          { label: 'Artists' },
+          { label: 'Releases' },
+          { label: 'Events' },
+          { label: 'Shop' },
+        ]}
+        hamburgerColor="white"
+        menuBg="bg-zinc-900"
+        menuText="text-white"
+        desktopItemClass="text-gray-400 hover:text-white glitch-hover"
+      />
     </header>
     <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16 text-center">
       <p className="text-gray-500 mb-4">NEW RELEASE</p>
@@ -3813,14 +3936,18 @@ const VintageAnalogDemo = ({ }: StyleDemoProps) => (
     <div className="absolute inset-0 opacity-30 pointer-events-none"
       style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noise\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noise)\'/%3E%3C/svg%3E")' }} />
     <header className="relative z-10 max-w-4xl mx-auto px-8 py-8">
-      <nav className="flex justify-between items-center">
-        <h1 className="text-3xl font-serif" style={{ color: '#5D4037' }}>analog</h1>
-        <div className="flex gap-6 font-serif">
-          {['Gallery', 'About', 'Contact'].map((item) => (
-            <a key={item} href="#" style={{ color: '#8D6E63' }} className="hover:underline">{item}</a>
-          ))}
-        </div>
-      </nav>
+      <MobileNav
+        logo={<h1 className="text-3xl font-serif" style={{ color: '#5D4037' }}>analog</h1>}
+        items={[
+          { label: 'Gallery' },
+          { label: 'About' },
+          { label: 'Contact' },
+        ]}
+        hamburgerColor="#5D4037"
+        menuBg="bg-amber-50"
+        menuText="text-amber-900 font-serif"
+        desktopItemClass="font-serif hover:underline"
+      />
     </header>
     <main className="relative z-10 max-w-4xl mx-auto px-8 py-12">
       <section className="text-center mb-16">
