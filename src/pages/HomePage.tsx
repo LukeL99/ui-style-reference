@@ -119,7 +119,7 @@ export const HomePage = () => {
             {/* Badge */}
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-violet-100 to-fuchsia-100 rounded-full mb-8">
               <span className="w-2 h-2 bg-gradient-to-r from-violet-500 to-fuchsia-500 rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-gray-700">49 Interactive Design Styles</span>
+              <span className="text-sm font-medium text-gray-700">67 Interactive Design Styles</span>
             </div>
             
             {/* Main Heading */}
@@ -140,7 +140,7 @@ export const HomePage = () => {
               >
                 UI UX Pro Max
               </a>
-              . Explore 49 styles with live demos, color palettes, and implementation tips.
+              . Explore 67 styles with live demos, color palettes, and implementation tips.
             </p>
             
             <p className="text-sm text-gray-500 mb-10">
@@ -193,11 +193,11 @@ export const HomePage = () => {
         <div className="max-w-7xl mx-auto px-4 py-8">
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-fuchsia-600">49</div>
+              <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-violet-600 to-fuchsia-600">67</div>
               <div className="text-sm text-gray-500 mt-1">Design Styles</div>
             </div>
             <div>
-              <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-orange-500">8</div>
+              <div className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-fuchsia-600 to-orange-500">10</div>
               <div className="text-sm text-gray-500 mt-1">Categories</div>
             </div>
             <div>
