@@ -1589,10 +1589,10 @@ const MotionDrivenDemo = ({ }: StyleDemoProps) => (
 
     {/* Hero */}
     <section className="max-w-6xl mx-auto px-8 py-16 text-center">
-      <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 animate-slideIn">
+      <h1 className="text-6xl md:text-8xl font-bold text-white mb-8 animate-slideIn leading-tight">
         Motion is<br />
-        <span className="animate-float inline-block" style={{ animationDelay: '0.2s' }}>our</span>{' '}
-        <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500 animate-float inline-block" style={{ animationDelay: '0.4s' }}>language</span>
+        <span className="animate-float inline-block pb-2" style={{ animationDelay: '0.2s' }}>our</span>{' '}
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-yellow-500 animate-float inline-block pb-2" style={{ animationDelay: '0.4s' }}>language</span>
       </h1>
       <p className="text-xl text-white/70 max-w-2xl mx-auto mb-12 animate-slideIn" style={{ animationDelay: '0.3s' }}>
         We craft digital experiences that move people. Literally.
