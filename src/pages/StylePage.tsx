@@ -34,6 +34,9 @@ export const StylePage = () => {
             </svg>
             <span className="font-medium">All Styles</span>
           </Link>
+          <div className="absolute left-1/2 transform -translate-x-1/2">
+            <span className="text-lg font-semibold text-gray-900">{style.name}</span>
+          </div>
           <div className="flex items-center gap-4">
             {prevStyle && (
               <Link
