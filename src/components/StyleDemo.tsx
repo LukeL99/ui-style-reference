@@ -121,7 +121,7 @@ const NeumorphismDemo = ({ }: StyleDemoProps) => (
     </header>
 
     {/* Main Cards */}
-    <section className="max-w-5xl mx-auto px-8 py-8">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {[
           { icon: '🌅', title: 'Morning Calm', time: '10 min', desc: 'Start your day with intention' },
@@ -535,7 +535,7 @@ const VibrantDemo = ({ }: StyleDemoProps) => (
     <header className="max-w-6xl mx-auto px-8 py-16">
       <nav className="flex justify-between items-center mb-16">
         <span className="text-3xl font-black text-white">VOLTAIC</span>
-        <div className="flex gap-6 text-gray-400">
+        <div className="hidden sm:flex gap-6 text-gray-400">
           {['Work', 'About', 'Careers', 'Contact'].map((item) => (
             <a key={item} href="#" className="hover:text-white transition-colors">{item}</a>
           ))}
@@ -613,7 +613,7 @@ const VibrantDemo = ({ }: StyleDemoProps) => (
 const DarkModeDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16 bg-black">
     {/* Hero */}
-    <header className="max-w-5xl mx-auto px-8 py-16">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-16">
       <nav className="flex justify-between items-center mb-16">
         <div className="flex items-center gap-2">
           <div className="w-8 h-8 rounded-lg flex items-center justify-center" 
@@ -622,7 +622,7 @@ const DarkModeDemo = ({ }: StyleDemoProps) => (
           </div>
           <span className="text-white font-semibold">NightCode</span>
         </div>
-        <div className="flex gap-6 text-gray-500">
+        <div className="hidden sm:flex gap-6 text-gray-500">
           {['Features', 'Pricing', 'Docs', 'Blog'].map((item) => (
             <a key={item} href="#" className="hover:text-white transition-colors">{item}</a>
           ))}
@@ -649,7 +649,7 @@ const DarkModeDemo = ({ }: StyleDemoProps) => (
     </header>
 
     {/* Code Preview */}
-    <section className="max-w-5xl mx-auto px-8 py-8">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <div className="rounded-xl border border-gray-800 overflow-hidden">
         <div className="flex items-center gap-2 px-4 py-3 bg-gray-900/50 border-b border-gray-800">
           <div className="w-3 h-3 rounded-full bg-red-500" />
@@ -668,7 +668,7 @@ const DarkModeDemo = ({ }: StyleDemoProps) => (
     </section>
 
     {/* Features */}
-    <section className="max-w-5xl mx-auto px-8 py-16">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16">
       <h2 className="text-3xl font-bold text-white mb-8">Built for the night shift</h2>
       <div className="grid md:grid-cols-2 gap-6">
         {[
@@ -689,7 +689,7 @@ const DarkModeDemo = ({ }: StyleDemoProps) => (
     </section>
 
     {/* Stats */}
-    <section className="max-w-5xl mx-auto px-8 py-16">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16">
       <div className="grid grid-cols-3 gap-8">
         {[
           { value: '1M+', label: 'Developers', color: '#39FF14' },
@@ -808,22 +808,22 @@ const AccessibleDemo = ({ }: StyleDemoProps) => (
 // 9. CLAYMORPHISM - "LearnPlay" Kids Education App
 // ============================================================================
 const ClaymorphismDemo = ({ }: StyleDemoProps) => (
-  <div className="min-h-screen pt-16" style={{ background: '#F0E6FA' }}>
+  <div className="min-h-screen pt-16 overflow-x-hidden" style={{ background: '#F0E6FA' }}>
     {/* Header */}
-    <header className="max-w-5xl mx-auto px-8 py-8">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-6 sm:py-8">
       <nav className="flex justify-between items-center">
-        <div className="flex items-center gap-3">
-          <div className="w-14 h-14 rounded-2xl flex items-center justify-center"
+        <div className="flex items-center gap-2 sm:gap-3">
+          <div className="w-10 sm:w-14 h-10 sm:h-14 rounded-2xl flex items-center justify-center"
             style={{
               backgroundColor: '#FFD93D',
               border: '4px solid rgba(255,255,255,0.5)',
               boxShadow: 'inset -4px -4px 8px rgba(0,0,0,0.1), 6px 6px 12px rgba(0,0,0,0.15)'
             }}>
-            <span className="text-3xl">🎈</span>
+            <span className="text-2xl sm:text-3xl">🎈</span>
           </div>
-          <span className="text-2xl font-bold text-gray-700">LearnPlay</span>
+          <span className="text-xl sm:text-2xl font-bold text-gray-700">LearnPlay</span>
         </div>
-        <div className="flex gap-4">
+        <div className="hidden sm:flex gap-4">
           {['Games', 'Stories', 'Music'].map((item) => (
             <button key={item} className="px-5 py-2 rounded-xl font-medium text-gray-600"
               style={{
@@ -839,20 +839,20 @@ const ClaymorphismDemo = ({ }: StyleDemoProps) => (
     </header>
 
     {/* Hero */}
-    <section className="max-w-5xl mx-auto px-8 py-12 text-center">
-      <h1 className="text-5xl font-bold text-gray-700 mb-6">Learning is an Adventure! 🚀</h1>
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-8 sm:py-12 text-center">
+      <h1 className="text-3xl sm:text-5xl font-bold text-gray-700 mb-6">Learning is an Adventure! 🚀</h1>
       <p className="text-xl text-gray-500 mb-12 max-w-2xl mx-auto">
         Fun games and stories that help kids learn letters, numbers, and so much more!
       </p>
 
       {/* Character Cards */}
-      <div className="flex justify-center gap-8 mb-12">
+      <div className="flex justify-center gap-4 sm:gap-8 mb-12 flex-wrap">
         {[
           { emoji: '🦁', name: 'Leo', color: '#FDBCB4' },
           { emoji: '🐰', name: 'Bunny', color: '#ADD8E6' },
           { emoji: '🦊', name: 'Felix', color: '#98FF98' },
         ].map((char, i) => (
-          <div key={i} className="w-36 h-44 rounded-3xl flex flex-col items-center justify-center cursor-pointer hover:scale-105 transition-transform"
+          <div key={i} className="w-28 sm:w-36 h-36 sm:h-44 rounded-3xl flex flex-col items-center justify-center cursor-pointer hover:scale-105 transition-transform"
             style={{
               backgroundColor: char.color,
               border: '4px solid rgba(255,255,255,0.5)',
@@ -866,7 +866,7 @@ const ClaymorphismDemo = ({ }: StyleDemoProps) => (
     </section>
 
     {/* Activities */}
-    <section className="max-w-5xl mx-auto px-8 py-8">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <h2 className="text-3xl font-bold text-gray-700 mb-8 text-center">Today's Activities</h2>
       <div className="grid md:grid-cols-2 gap-8">
         {[
@@ -905,7 +905,7 @@ const ClaymorphismDemo = ({ }: StyleDemoProps) => (
     </section>
 
     {/* CTA */}
-    <section className="max-w-5xl mx-auto px-8 py-16 text-center">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16 text-center">
       <button className="px-12 py-5 rounded-2xl text-xl font-bold text-gray-700"
         style={{
           backgroundColor: '#FFD93D',
@@ -1067,7 +1067,7 @@ const RetroFuturismDemo = ({ }: StyleDemoProps) => (
           }}>
             NEON DRIVE
           </h1>
-          <div className="flex gap-8 font-mono uppercase text-sm tracking-widest">
+          <div className="hidden sm:flex gap-8 font-mono uppercase text-sm tracking-widest">
             {['Tracks', 'Artists', 'Events', 'Shop'].map((item) => (
               <a key={item} href="#" className="text-cyan-400 hover:text-cyan-300 transition-colors">{item}</a>
             ))}
@@ -2157,13 +2157,13 @@ const BentoBoxGridDemo = ({ }: StyleDemoProps) => (
 // 22. Y2K Aesthetic - "CHROME BABY" Fashion Brand
 const Y2KDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16" style={{ background: 'linear-gradient(135deg, #FF69B4, #00FFFF)' }}>
-    <header className="max-w-5xl mx-auto px-8 py-8 text-center">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8 text-center">
       <h1 className="text-6xl font-black text-white mb-2" style={{ textShadow: '3px 3px 0 #9400D3, 6px 6px 0 #C0C0C0' }}>
         CHROME BABY
       </h1>
       <p className="text-white/90 text-xl font-bold tracking-widest">★ FASHION FOR THE FUTURE ★</p>
     </header>
-    <section className="max-w-5xl mx-auto px-8 py-12">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-12">
       <div className="grid md:grid-cols-3 gap-8">
         {[
           { name: 'HOLO JACKET', price: '$299', emoji: '🧥' },
@@ -2279,7 +2279,7 @@ const CyberpunkDemo = ({ }: StyleDemoProps) => (
 // ============================================================================
 const OrganicBiophilicDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16" style={{ background: '#F5F5DC' }}>
-    <header className="max-w-5xl mx-auto px-8 py-8">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <nav className="flex justify-between items-center">
         <div className="flex items-center gap-3">
           <span className="text-4xl">🌿</span>
@@ -2292,7 +2292,7 @@ const OrganicBiophilicDemo = ({ }: StyleDemoProps) => (
         </div>
       </nav>
     </header>
-    <section className="max-w-5xl mx-auto px-8 py-16">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16">
       <h1 className="text-5xl md:text-6xl font-serif text-green-900 mb-6 leading-tight">
         Live in harmony<br />with nature
       </h1>
@@ -2310,7 +2310,7 @@ const OrganicBiophilicDemo = ({ }: StyleDemoProps) => (
         </button>
       </div>
     </section>
-    <section className="max-w-5xl mx-auto px-8 py-8">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <div className="grid md:grid-cols-3 gap-8">
         {[
           { icon: '🌱', title: 'Grow Tracker', desc: 'Monitor your plants from seed to harvest with personalized care tips.' },
@@ -2325,7 +2325,7 @@ const OrganicBiophilicDemo = ({ }: StyleDemoProps) => (
         ))}
       </div>
     </section>
-    <section className="max-w-5xl mx-auto px-8 py-16">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16">
       <div className="p-8 rounded-3xl flex items-center gap-8" style={{ background: 'rgba(139,69,19,0.1)' }}>
         <div className="text-8xl">🌻</div>
         <div>
@@ -2423,7 +2423,7 @@ const MemphisDemo = ({ }: StyleDemoProps) => (
     <div className="absolute top-40 right-20 w-20 h-20" style={{ background: '#FFCE5C', transform: 'rotate(45deg)' }} />
     <div className="absolute bottom-40 left-1/4 w-0 h-0" style={{ borderLeft: '40px solid transparent', borderRight: '40px solid transparent', borderBottom: '70px solid #86CCCA' }} />
     <div className="absolute top-1/2 right-10 w-16 h-40" style={{ background: 'repeating-linear-gradient(45deg, #000, #000 5px, transparent 5px, transparent 10px)' }} />
-    <header className="max-w-5xl mx-auto px-8 py-8 relative z-10">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8 relative z-10">
       <nav className="flex justify-between items-center">
         <h1 className="text-4xl font-black" style={{ color: '#6A7BB4' }}>SHAPES</h1>
         <div className="flex gap-6 font-bold">
@@ -2433,7 +2433,7 @@ const MemphisDemo = ({ }: StyleDemoProps) => (
         </div>
       </nav>
     </header>
-    <section className="max-w-5xl mx-auto px-8 py-16 relative z-10">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16 relative z-10">
       <p className="font-bold text-xl mb-4" style={{ color: '#FF71CE' }}>JULY 15-18, 2025 • BROOKLYN, NY</p>
       <h2 className="text-6xl md:text-8xl font-black mb-8 leading-none">
         <span style={{ color: '#FF71CE' }}>ART</span> <span style={{ color: '#6A7BB4' }}>MUSIC</span><br />
@@ -2447,7 +2447,7 @@ const MemphisDemo = ({ }: StyleDemoProps) => (
         GET TICKETS ↗
       </button>
     </section>
-    <section className="max-w-5xl mx-auto px-8 py-8 relative z-10">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-8 relative z-10">
       <div className="grid md:grid-cols-4 gap-6">
         {[
           { day: 'FRI', title: 'Opening Night', color: '#FF71CE' },
@@ -2462,7 +2462,7 @@ const MemphisDemo = ({ }: StyleDemoProps) => (
         ))}
       </div>
     </section>
-    <section className="max-w-5xl mx-auto px-8 py-16 relative z-10">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16 relative z-10">
       <div className="p-8 border-4 border-black" style={{ background: '#FFCE5C', boxShadow: '12px 12px 0 #000' }}>
         <h3 className="text-3xl font-black mb-4">EARLY BIRD SPECIAL ★</h3>
         <p className="text-xl mb-6">Save 30% when you buy before May 1st!</p>
@@ -2480,7 +2480,7 @@ const VaporwaveDemo = ({ }: StyleDemoProps) => (
     style={{ background: 'linear-gradient(180deg, #FF71CE 0%, #01CDFE 50%, #B967FF 100%)' }}>
     <div className="absolute inset-0 opacity-30"
       style={{ backgroundImage: 'repeating-linear-gradient(0deg, transparent 0px, transparent 2px, rgba(255,255,255,0.1) 2px, rgba(255,255,255,0.1) 4px)' }} />
-    <header className="max-w-5xl mx-auto px-8 py-8 relative z-10 text-center">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8 relative z-10 text-center">
       <h1 className="text-5xl md:text-7xl font-bold text-white mb-4"
         style={{ textShadow: '4px 4px 0 #B967FF, 8px 8px 0 #01CDFE', fontFamily: 'serif' }}>
         ＰＡＲＡＤＩＳＥ．ＦＭ
@@ -2598,7 +2598,7 @@ const ExaggeratedMinimalismDemo = ({ }: StyleDemoProps) => (
     <header className="max-w-7xl mx-auto px-8 py-8">
       <nav className="flex justify-between items-center">
         <span className="text-xl tracking-widest">VOID</span>
-        <div className="flex gap-8 text-sm tracking-widest">
+        <div className="hidden sm:flex gap-8 text-sm tracking-widest">
           {['WORK', 'ABOUT', 'CONTACT'].map((item) => (
             <a key={item} href="#" className="hover:line-through">{item}</a>
           ))}
@@ -2945,11 +2945,11 @@ const PixelArtDemo = ({ }: StyleDemoProps) => (
 // ============================================================================
 const BentoGridsDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16" style={{ background: '#F5F5F7' }}>
-    <header className="max-w-5xl mx-auto px-8 py-12">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-12">
       <h1 className="text-4xl font-semibold text-gray-900">Sarah Chen</h1>
       <p className="text-gray-500 mt-2">Product Designer • San Francisco</p>
     </header>
-    <main className="max-w-5xl mx-auto px-8 py-4">
+    <main className="max-w-5xl mx-auto px-4 sm:px-8 py-4">
       <div className="grid grid-cols-4 gap-4 auto-rows-[140px]">
         <div className="col-span-2 row-span-2 bg-gradient-to-br from-violet-500 to-purple-600 rounded-3xl p-8 flex flex-col justify-between text-white">
           <div>
@@ -3105,12 +3105,12 @@ const GenZChaosDemo = ({ }: StyleDemoProps) => (
     <div className="absolute bottom-20 left-1/4 text-7xl rotate-45">👀</div>
     <div className="absolute top-1/2 right-1/4 text-5xl -rotate-6">💀</div>
     <div className="absolute inset-0 pointer-events-none" style={{ backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'40\' height=\'40\' viewBox=\'0 0 40 40\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cpath d=\'M0 0h40v40H0V0zm20 20v20H0V20h20zm20 0v20H20V20h20zM20 0v20H0V0h20z\' fill=\'%23FF00FF\' fill-opacity=\'0.05\'/%3E%3C/svg%3E")' }} />
-    <header className="relative z-10 max-w-5xl mx-auto px-8 py-8">
+    <header className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <h1 className="text-6xl font-black" style={{ transform: 'rotate(-2deg)', textShadow: '4px 4px 0 #FF00FF' }}>
         UNHINGED
       </h1>
     </header>
-    <section className="relative z-10 max-w-5xl mx-auto px-8 py-8">
+    <section className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <div className="p-8" style={{ background: '#FF00FF', transform: 'rotate(1deg)', boxShadow: '8px 8px 0 #000' }}>
         <p className="text-white font-black text-xl mb-2">⚠️ LIMITED DROP ⚠️</p>
         <h2 className="text-5xl font-black text-white mb-4" style={{ textShadow: '3px 3px 0 #00FFFF' }}>
@@ -3119,7 +3119,7 @@ const GenZChaosDemo = ({ }: StyleDemoProps) => (
         <p className="text-white text-xl">DROPS IN 00:47:23</p>
       </div>
     </section>
-    <section className="relative z-10 max-w-5xl mx-auto px-8 py-8">
+    <section className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <div className="grid md:grid-cols-3 gap-6">
         {[
           { name: 'CHAOS TEE', price: '$69', bg: '#00FFFF' },
@@ -3137,7 +3137,7 @@ const GenZChaosDemo = ({ }: StyleDemoProps) => (
         ))}
       </div>
     </section>
-    <section className="relative z-10 max-w-5xl mx-auto px-8 py-8">
+    <section className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <div className="overflow-hidden whitespace-nowrap">
         <span className="inline-block animate-pulse text-4xl font-black" style={{ animationDuration: '0.5s' }}>
           NO REFUNDS • FINAL SALE • NO THOUGHTS • JUST VIBES • NO REFUNDS • FINAL SALE •
@@ -3156,7 +3156,7 @@ const BiomimeticDemo = ({ }: StyleDemoProps) => (
       @keyframes breathe { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.05); } }
       .breathing { animation: breathe 4s ease-in-out infinite; }
     `}</style>
-    <header className="max-w-5xl mx-auto px-8 py-8">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <nav className="flex justify-between items-center">
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-full breathing" style={{ background: 'linear-gradient(135deg, #00FF41, #00FFFF)' }} />
@@ -3169,7 +3169,7 @@ const BiomimeticDemo = ({ }: StyleDemoProps) => (
         </div>
       </nav>
     </header>
-    <section className="max-w-5xl mx-auto px-8 py-16 text-center">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16 text-center">
       <div className="w-40 h-40 mx-auto mb-12 rounded-full breathing"
         style={{ background: 'radial-gradient(circle, rgba(0,255,65,0.3) 0%, transparent 70%)', border: '2px solid rgba(0,255,65,0.5)' }}>
         <div className="w-full h-full rounded-full flex items-center justify-center"
@@ -3189,7 +3189,7 @@ const BiomimeticDemo = ({ }: StyleDemoProps) => (
         Explore Our Research
       </button>
     </section>
-    <section className="max-w-5xl mx-auto px-8 py-8">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <div className="grid md:grid-cols-3 gap-6">
         {[
           { title: 'Cellular Computing', desc: 'Processing inspired by neural networks', icon: '🔬' },
@@ -3339,7 +3339,7 @@ const TactileDigitalDemo = ({ }: StyleDemoProps) => (
 // ============================================================================
 const NatureDistilledDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16" style={{ background: '#F5F0E1' }}>
-    <header className="max-w-5xl mx-auto px-8 py-8">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <nav className="flex justify-between items-center">
         <h1 className="text-2xl font-serif" style={{ color: '#5D4E37' }}>Terra</h1>
         <div className="flex gap-6">
@@ -3349,7 +3349,7 @@ const NatureDistilledDemo = ({ }: StyleDemoProps) => (
         </div>
       </nav>
     </header>
-    <section className="max-w-5xl mx-auto px-8 py-16">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16">
       <h2 className="text-5xl font-serif mb-6" style={{ color: '#5D4E37' }}>
         Goods from<br />the earth
       </h2>
@@ -3362,7 +3362,7 @@ const NatureDistilledDemo = ({ }: StyleDemoProps) => (
         Explore Collection
       </button>
     </section>
-    <section className="max-w-5xl mx-auto px-8 py-8">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <div className="grid md:grid-cols-3 gap-8">
         {[
           { name: 'Ceramic Vase', price: '$89', material: 'Hand-thrown clay' },
@@ -3383,7 +3383,7 @@ const NatureDistilledDemo = ({ }: StyleDemoProps) => (
         ))}
       </div>
     </section>
-    <section className="max-w-5xl mx-auto px-8 py-16">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16">
       <div className="p-12 rounded-3xl" style={{ background: '#E8DFD0' }}>
         <div className="max-w-xl">
           <h3 className="text-3xl font-serif mb-4" style={{ color: '#5D4E37' }}>Our Promise</h3>
@@ -3612,7 +3612,7 @@ const GradientMeshDemo = ({ }: StyleDemoProps) => (
         animation: 'aurora 15s ease infinite'
       }} />
     <div className="absolute inset-0 backdrop-blur-3xl" style={{ background: 'rgba(255,255,255,0.1)' }} />
-    <div className="relative z-10 max-w-5xl mx-auto px-8">
+    <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-8">
       <header className="py-8">
         <nav className="flex justify-between items-center">
           <span className="text-2xl font-bold text-white drop-shadow-lg">Prism</span>
@@ -3739,7 +3739,7 @@ const ChromaticDemo = ({ }: StyleDemoProps) => (
       .rgb-text { animation: rgbSplit 0.5s infinite; }
       .glitch-hover:hover { animation: glitch 0.3s infinite; }
     `}</style>
-    <header className="max-w-5xl mx-auto px-8 py-8">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <nav className="flex justify-between items-center">
         <h1 className="text-3xl font-black text-white rgb-text">GLITCH</h1>
         <div className="flex gap-6">
@@ -3749,7 +3749,7 @@ const ChromaticDemo = ({ }: StyleDemoProps) => (
         </div>
       </nav>
     </header>
-    <section className="max-w-5xl mx-auto px-8 py-16 text-center">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-16 text-center">
       <p className="text-gray-500 mb-4">NEW RELEASE</p>
       <h2 className="text-6xl md:text-8xl font-black text-white mb-8 rgb-text">
         SYSTEM<br />ERROR
@@ -3767,7 +3767,7 @@ const ChromaticDemo = ({ }: StyleDemoProps) => (
         </button>
       </div>
     </section>
-    <section className="max-w-5xl mx-auto px-8 py-8">
+    <section className="max-w-5xl mx-auto px-4 sm:px-8 py-8">
       <h3 className="text-xl font-bold text-white mb-6 rgb-text">LATEST RELEASES</h3>
       <div className="grid md:grid-cols-3 gap-6">
         {[

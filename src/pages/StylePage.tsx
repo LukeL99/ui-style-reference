@@ -27,37 +27,26 @@ export const StylePage = () => {
     <div className="min-h-screen">
       {/* Navigation Bar */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-lg border-b border-gray-200">
-        <div className="max-w-7xl mx-auto px-4 py-3">
-          {/* Mobile: stacked layout */}
-          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-            {/* Top row on mobile: back + title */}
-            <div className="flex items-center justify-between sm:justify-start gap-4">
-              <Link to="/" className="flex items-center gap-2 text-gray-900 hover:text-blue-600 transition-colors shrink-0">
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-                <span className="font-medium hidden sm:inline">All Styles</span>
-              </Link>
-              <span className="text-base sm:text-lg font-semibold text-gray-900 truncate sm:absolute sm:left-1/2 sm:transform sm:-translate-x-1/2">{style.name}</span>
-            </div>
-            {/* Bottom row on mobile: prev/next */}
-            <div className="flex items-center justify-between sm:justify-end gap-4 text-sm">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 py-2 sm:py-3">
+          {/* Mobile: simple row with back, title, next */}
+          <div className="flex items-center justify-between gap-2">
+            <Link to="/" className="flex items-center gap-1 text-gray-900 hover:text-blue-600 transition-colors shrink-0">
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </Link>
+            <span className="text-sm sm:text-lg font-semibold text-gray-900 text-center flex-1 px-2">{style.name}</span>
+            <div className="flex items-center gap-3 text-sm shrink-0">
               {prevStyle ? (
-                <Link
-                  to={`/style/${prevStyle.slug}`}
-                  className="text-gray-600 hover:text-blue-600 transition-colors truncate max-w-[40%] sm:max-w-none"
-                >
-                  ← <span className="hidden sm:inline">{prevStyle.name}</span><span className="sm:hidden">Prev</span>
+                <Link to={`/style/${prevStyle.slug}`} className="text-gray-600 hover:text-blue-600">
+                  ← <span className="hidden sm:inline">Prev</span>
                 </Link>
-              ) : <span />}
+              ) : <span className="w-8" />}
               {nextStyle ? (
-                <Link
-                  to={`/style/${nextStyle.slug}`}
-                  className="text-gray-600 hover:text-blue-600 transition-colors truncate max-w-[40%] sm:max-w-none"
-                >
-                  <span className="hidden sm:inline">{nextStyle.name}</span><span className="sm:hidden">Next</span> →
+                <Link to={`/style/${nextStyle.slug}`} className="text-gray-600 hover:text-blue-600">
+                  <span className="hidden sm:inline">Next</span> →
                 </Link>
-              ) : <span />}
+              ) : <span className="w-8" />}
             </div>
           </div>
         </div>
