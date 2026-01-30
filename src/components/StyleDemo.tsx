@@ -2710,7 +2710,13 @@ const ExaggeratedMinimalismDemo = ({ }: StyleDemoProps) => (
       <h1 className="text-[12vw] font-black leading-[0.85] tracking-tight text-black mb-24">
         SPACE<br />
         IS<br />
-        <span className="text-white" style={{ WebkitTextStroke: '2px black' }}>EVERYTHING</span>
+        <span 
+          className="text-white"
+          style={{ 
+            textShadow: `-1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000,
+                         -2px 0 0 #000, 2px 0 0 #000, 0 -2px 0 #000, 0 2px 0 #000`
+          }}
+        >EVERYTHING</span>
       </h1>
       <div className="flex justify-between items-end">
         <p className="text-xl max-w-sm text-gray-600">
