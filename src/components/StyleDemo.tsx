@@ -1218,7 +1218,7 @@ const FlatDesignDemo = ({ }: StyleDemoProps) => (
           { icon: '👥', title: 'Team Sync', desc: 'Share lists with your team and collaborate in real-time.', color: 'bg-purple-500' },
           { icon: '📱', title: 'Works Everywhere', desc: 'iOS, Android, Web, and desktop apps that stay in sync.', color: 'bg-orange-500' },
           { icon: '🔄', title: 'Recurring Tasks', desc: 'Set it and forget it. Tasks repeat automatically.', color: 'bg-pink-500' },
-          { icon: '📊', title: 'Progress Tracking', desc: 'See how much you've accomplished at a glance.', color: 'bg-cyan-500' },
+          { icon: '📊', title: 'Progress Tracking', desc: 'See how much you have accomplished at a glance.', color: 'bg-cyan-500' },
         ].map((feature, i) => (
           <div key={i} className="bg-white p-6 rounded-lg border border-gray-200">
             <div className={`w-12 h-12 ${feature.color} rounded-lg flex items-center justify-center mb-4`}>
@@ -2187,4 +2187,35 @@ const Y2KDemo = ({ }: StyleDemoProps) => (
       </div>
     </section>
     <section className="text-center py-12">
-      <div className="
+      <p className="text-white text-2xl font-bold" style={{ textShadow: '2px 2px 0 #9400D3' }}>
+        ✨ FREE SHIPPING ON ORDERS OVER $100 ✨
+      </p>
+    </section>
+  </div>
+);
+
+// Map all demos to their slugs
+const styleDemos: Record<string, React.FC<StyleDemoProps>> = {
+  'minimalism-swiss-style': MinimalismDemo,
+  'neumorphism': NeumorphismDemo,
+  'glassmorphism': GlassmorphismDemo,
+  'brutalism': BrutalismDemo,
+  '3d-hyperrealism': ThreeDDemo,
+  'vibrant-block-based': VibrantDemo,
+  'dark-mode-oled': DarkModeDemo,
+  'accessible-ethical': AccessibleDemo,
+  'claymorphism': ClaymorphismDemo,
+  'aurora-ui': AuroraDemo,
+  'retro-futurism': RetroFuturismDemo,
+  'flat-design': FlatDesignDemo,
+  'skeuomorphism': SkeuomorphismDemo,
+  'liquid-glass': LiquidGlassDemo,
+  'motion-driven': MotionDrivenDemo,
+  'micro-interactions': MicroInteractionsDemo,
+  'inclusive-design': InclusiveDesignDemo,
+  'zero-interface': ZeroInterfaceDemo,
+  'soft-ui-evolution': SoftUIEvolutionDemo,
+  'neubrutalism': NeubrutalismDemo,
+  'bento-box-grid': BentoBoxGridDemo,
+  'y2k-aesthetic': Y2KDemo,
+};
