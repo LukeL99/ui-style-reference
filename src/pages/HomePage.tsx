@@ -123,16 +123,36 @@ export const HomePage = () => {
             </div>
             
             {/* Main Heading */}
-            <h1 className="text-5xl sm:text-7xl font-black text-gray-900 mb-6 tracking-tight">
+            <h1 className="text-5xl sm:text-7xl font-black text-gray-900 mb-6 tracking-tight leading-tight pb-1">
               The Ultimate
-              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-fuchsia-600 to-orange-500">
+              <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-fuchsia-600 to-orange-500 pb-2">
                 UI Style Guide
               </span>
             </h1>
             
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-10 leading-relaxed">
-              Explore, learn, and get inspired by 49 distinctive UI design styles. 
-              Each with live demos, use cases, color palettes, and implementation tips.
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto mb-6 leading-relaxed">
+              A visual showcase of the design styles available in{' '}
+              <a 
+                href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-fuchsia-600 hover:text-fuchsia-700 font-medium"
+              >
+                UI UX Pro Max
+              </a>
+              . Explore 49 styles with live demos, color palettes, and implementation tips.
+            </p>
+            
+            <p className="text-sm text-gray-500 mb-10">
+              Built with ♥ by{' '}
+              <a 
+                href="https://www.farad.dev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-700 hover:text-fuchsia-600 font-medium transition-colors"
+              >
+                Farad Labs
+              </a>
             </p>
             
             {/* CTA Buttons */}
@@ -145,10 +165,12 @@ export const HomePage = () => {
                 <span className="inline-block ml-2 group-hover:translate-x-1 transition-transform">→</span>
               </a>
               <a
-                href="#about"
+                href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="px-8 py-4 bg-white text-gray-700 border border-gray-200 rounded-2xl font-semibold hover:border-gray-300 hover:shadow-lg transition-all duration-300 hover:-translate-y-0.5"
               >
-                Learn More
+                Get the Skill
               </a>
             </div>
           </div>
