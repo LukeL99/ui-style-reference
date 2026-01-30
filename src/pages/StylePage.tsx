@@ -11,7 +11,8 @@ declare global {
 }
 
 const trackEvent = (eventName: string, params: Record<string, unknown>) => {
-  if (typeof window !== 'undefined' && window.gtag) {
+  // Only track on canonical production URL
+  if (typeof window !== 'undefined' && window.gtag && window.location.hostname === 'www.uistyleguide.com') {
     window.gtag('event', eventName, params);
   }
 };
