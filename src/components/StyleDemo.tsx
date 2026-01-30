@@ -2881,23 +2881,23 @@ const SwissModernism2Demo = ({ }: StyleDemoProps) => (
         desktopItemClass="text-gray-600 hover:text-black"
       />
     </header>
-    <main className="max-w-6xl mx-auto px-8 py-16">
-      <div className="grid grid-cols-12 gap-8">
-        <div className="col-span-8">
+    <main className="max-w-6xl mx-auto px-4 sm:px-8 py-16">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <div className="md:col-span-8">
           <p className="text-red-600 font-medium mb-4">Version 3.0</p>
-          <h1 className="text-6xl font-bold leading-tight mb-8">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold leading-tight mb-8">
             A systematic approach to modern interface design.
           </h1>
-          <p className="text-xl text-gray-600 mb-8">
+          <p className="text-lg sm:text-xl text-gray-600 mb-8">
             Ratio is a comprehensive design system built on mathematical principles, 
             typographic scales, and grid-based layouts.
           </p>
-          <div className="flex gap-4">
+          <div className="flex flex-col sm:flex-row gap-4">
             <button className="px-6 py-3 bg-black text-white font-medium">Read Documentation</button>
             <button className="px-6 py-3 border border-black text-black font-medium">View on GitHub</button>
           </div>
         </div>
-        <div className="col-span-4">
+        <div className="hidden md:block md:col-span-4">
           <div className="space-y-4">
             <div className="h-32 bg-black rounded" />
             <div className="h-20 bg-red-600 rounded" />
@@ -2906,19 +2906,19 @@ const SwissModernism2Demo = ({ }: StyleDemoProps) => (
         </div>
       </div>
     </main>
-    <section className="max-w-6xl mx-auto px-8 py-16 border-t border-gray-200">
-      <div className="grid grid-cols-12 gap-8">
-        <div className="col-span-4">
+    <section className="max-w-6xl mx-auto px-4 sm:px-8 py-16 border-t border-gray-200">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div>
           <span className="text-sm text-gray-500 font-medium">01</span>
           <h3 className="text-2xl font-bold mt-2 mb-4">Grid System</h3>
           <p className="text-gray-600">12-column responsive grid with mathematical spacing scale.</p>
         </div>
-        <div className="col-span-4">
+        <div>
           <span className="text-sm text-gray-500 font-medium">02</span>
           <h3 className="text-2xl font-bold mt-2 mb-4">Typography</h3>
           <p className="text-gray-600">Modular scale based on perfect fourth (1.333) ratio.</p>
         </div>
-        <div className="col-span-4">
+        <div>
           <span className="text-sm text-gray-500 font-medium">03</span>
           <h3 className="text-2xl font-bold mt-2 mb-4">Components</h3>
           <p className="text-gray-600">60+ accessible components following systematic principles.</p>
@@ -3060,51 +3060,51 @@ const BentoGridsDemo = ({ }: StyleDemoProps) => (
       <p className="text-gray-500 mt-2">Product Designer • San Francisco</p>
     </header>
     <main className="max-w-5xl mx-auto px-4 sm:px-8 py-4">
-      <div className="grid grid-cols-4 gap-4 auto-rows-[140px]">
-        <div className="col-span-2 row-span-2 bg-gradient-to-br from-violet-500 to-purple-600 rounded-3xl p-8 flex flex-col justify-between text-white">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 auto-rows-[120px] sm:auto-rows-[140px]">
+        <div className="col-span-2 row-span-2 bg-gradient-to-br from-violet-500 to-purple-600 rounded-3xl p-4 sm:p-8 flex flex-col justify-between text-white">
           <div>
-            <p className="text-white/70 text-sm">Featured Project</p>
-            <h3 className="text-2xl font-semibold mt-2">Fintech App Redesign</h3>
+            <p className="text-white/70 text-xs sm:text-sm">Featured Project</p>
+            <h3 className="text-lg sm:text-2xl font-semibold mt-1 sm:mt-2">Fintech App Redesign</h3>
           </div>
-          <p className="text-white/80">A complete overhaul of a banking app serving 2M+ users</p>
+          <p className="text-white/80 text-sm">A complete overhaul of a banking app serving 2M+ users</p>
         </div>
-        <div className="bg-white rounded-3xl p-6 flex flex-col justify-between shadow-sm">
-          <span className="text-3xl">📧</span>
-          <p className="text-sm text-gray-600">hello@sarah.design</p>
+        <div className="bg-white rounded-3xl p-4 sm:p-6 flex flex-col justify-between shadow-sm">
+          <span className="text-2xl sm:text-3xl">📧</span>
+          <p className="text-xs sm:text-sm text-gray-600 truncate">hello@sarah.design</p>
         </div>
-        <div className="bg-gray-900 rounded-3xl p-6 flex flex-col justify-between text-white">
-          <span className="text-3xl">🎯</span>
-          <p className="text-sm">10 years experience</p>
+        <div className="bg-gray-900 rounded-3xl p-4 sm:p-6 flex flex-col justify-between text-white">
+          <span className="text-2xl sm:text-3xl">🎯</span>
+          <p className="text-xs sm:text-sm">10 years experience</p>
         </div>
-        <div className="col-span-2 bg-gradient-to-r from-orange-400 to-pink-500 rounded-3xl p-6 flex items-center justify-between text-white">
+        <div className="col-span-2 bg-gradient-to-r from-orange-400 to-pink-500 rounded-3xl p-4 sm:p-6 flex items-center justify-between text-white">
           <div>
-            <p className="text-white/80 text-sm">Latest Article</p>
-            <h3 className="font-semibold mt-1">Design Systems at Scale</h3>
+            <p className="text-white/80 text-xs sm:text-sm">Latest Article</p>
+            <h3 className="font-semibold text-sm sm:text-base mt-1">Design Systems at Scale</h3>
           </div>
-          <span className="text-4xl">📝</span>
+          <span className="text-3xl sm:text-4xl">📝</span>
         </div>
-        <div className="bg-white rounded-3xl p-6 flex flex-col justify-center items-center shadow-sm">
-          <p className="text-4xl font-bold text-gray-900">50+</p>
-          <p className="text-sm text-gray-500 mt-1">Projects</p>
+        <div className="bg-white rounded-3xl p-4 sm:p-6 flex flex-col justify-center items-center shadow-sm">
+          <p className="text-3xl sm:text-4xl font-bold text-gray-900">50+</p>
+          <p className="text-xs sm:text-sm text-gray-500 mt-1">Projects</p>
         </div>
-        <div className="bg-white rounded-3xl p-6 flex flex-col justify-between shadow-sm">
-          <span className="text-3xl">🐦</span>
-          <p className="text-sm text-gray-600">@sarahdesigns</p>
+        <div className="bg-white rounded-3xl p-4 sm:p-6 flex flex-col justify-between shadow-sm">
+          <span className="text-2xl sm:text-3xl">🐦</span>
+          <p className="text-xs sm:text-sm text-gray-600">@sarahdesigns</p>
         </div>
-        <div className="col-span-2 bg-blue-500 rounded-3xl p-6 flex items-center gap-4 text-white">
-          <span className="text-5xl">💼</span>
+        <div className="col-span-2 bg-blue-500 rounded-3xl p-4 sm:p-6 flex items-center gap-3 sm:gap-4 text-white">
+          <span className="text-4xl sm:text-5xl">💼</span>
           <div>
-            <p className="font-semibold">Open to opportunities</p>
-            <p className="text-white/80 text-sm">Senior Product Design roles</p>
+            <p className="font-semibold text-sm sm:text-base">Open to opportunities</p>
+            <p className="text-white/80 text-xs sm:text-sm">Senior Product Design roles</p>
           </div>
         </div>
-        <div className="bg-white rounded-3xl p-6 flex flex-col justify-center items-center shadow-sm">
-          <span className="text-3xl">🏆</span>
-          <p className="text-sm text-gray-600 mt-2">3x Awwwards</p>
+        <div className="bg-white rounded-3xl p-4 sm:p-6 flex flex-col justify-center items-center shadow-sm">
+          <span className="text-2xl sm:text-3xl">🏆</span>
+          <p className="text-xs sm:text-sm text-gray-600 mt-2">3x Awwwards</p>
         </div>
-        <div className="bg-green-500 rounded-3xl p-6 flex flex-col justify-between text-white">
-          <span className="text-3xl">🎨</span>
-          <p className="text-sm">View Dribbble</p>
+        <div className="bg-green-500 rounded-3xl p-4 sm:p-6 flex flex-col justify-between text-white">
+          <span className="text-2xl sm:text-3xl">🎨</span>
+          <p className="text-xs sm:text-sm">View Dribbble</p>
         </div>
       </div>
     </main>
@@ -3542,8 +3542,8 @@ const InteractiveCursorDemo = ({ }: StyleDemoProps) => (
         desktopItemClass="magnetic transition-transform hover:text-pink-500"
       />
     </header>
-    <main className="max-w-6xl mx-auto px-8 py-24">
-      <h1 className="text-7xl font-bold mb-8 leading-tight">
+    <main className="max-w-6xl mx-auto px-4 sm:px-8 py-12 sm:py-24">
+      <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold mb-8 leading-tight">
         We create<br />
         <span className="text-transparent" style={{ WebkitTextStroke: '2px white' }}>experiences</span><br />
         that matter
@@ -3797,25 +3797,30 @@ const GradientMeshDemo = ({ }: StyleDemoProps) => (
 const EditorialGridDemo = ({ }: StyleDemoProps) => (
   <div className="min-h-screen pt-16 overflow-x-hidden bg-white">
     <header className="border-b-2 border-black">
-      <div className="max-w-6xl mx-auto px-8 py-6">
-        <div className="flex justify-between items-center">
-          <h1 className="text-5xl font-black">SLATE</h1>
-          <div className="flex gap-6 text-sm font-medium">
-            {['Culture', 'Tech', 'Design', 'Opinion'].map((cat) => (
-              <a key={cat} href="#" className="hover:underline underline-offset-4">{cat}</a>
-            ))}
-          </div>
-        </div>
+      <div className="max-w-6xl mx-auto px-4 sm:px-8 py-4 sm:py-6">
+        <MobileNav
+          logo={<h1 className="text-3xl sm:text-5xl font-black">SLATE</h1>}
+          items={[
+            { label: 'Culture' },
+            { label: 'Tech' },
+            { label: 'Design' },
+            { label: 'Opinion' },
+          ]}
+          hamburgerColor="black"
+          menuBg="bg-white"
+          menuText="text-gray-900 font-medium"
+          desktopItemClass="text-sm font-medium hover:underline underline-offset-4"
+        />
       </div>
     </header>
-    <main className="max-w-6xl mx-auto px-8 py-12">
-      <div className="grid grid-cols-12 gap-8">
-        <article className="col-span-8 border-b-2 border-gray-200 pb-8 mb-8">
+    <main className="max-w-6xl mx-auto px-4 sm:px-8 py-8 sm:py-12">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
+        <article className="md:col-span-8 border-b-2 border-gray-200 pb-8 mb-8">
           <span className="text-red-600 font-bold text-sm uppercase">Featured</span>
-          <h2 className="text-5xl font-bold mt-4 mb-4 leading-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mt-4 mb-4 leading-tight">
             The Future of Design is Already Here—We Just Don't See It
           </h2>
-          <p className="text-xl text-gray-600 mb-6">
+          <p className="text-lg sm:text-xl text-gray-600 mb-6">
             How emerging technologies are quietly reshaping the creative industry, 
             and why most designers are missing the revolution.
           </p>
@@ -3827,7 +3832,7 @@ const EditorialGridDemo = ({ }: StyleDemoProps) => (
             </div>
           </div>
         </article>
-        <aside className="col-span-4">
+        <aside className="md:col-span-4">
           <h3 className="font-bold text-sm uppercase mb-6 border-b-2 border-black pb-2">Most Read</h3>
           <div className="space-y-6">
             {[
@@ -3843,7 +3848,7 @@ const EditorialGridDemo = ({ }: StyleDemoProps) => (
           </div>
         </aside>
       </div>
-      <section className="grid grid-cols-3 gap-8 border-t-2 border-black pt-8">
+      <section className="grid grid-cols-1 sm:grid-cols-3 gap-8 border-t-2 border-black pt-8">
         {[
           { cat: 'Culture', title: 'How Gen Z is Redefining Luxury', author: 'Sofia Rivera' },
           { cat: 'Tech', title: 'The AI Tools Every Designer Needs in 2025', author: 'James Liu' },

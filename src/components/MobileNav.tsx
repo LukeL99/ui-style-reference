@@ -56,7 +56,7 @@ export const MobileNav = ({
 
       {/* Mobile menu dropdown */}
       {isOpen && (
-        <div className={`absolute top-full right-0 mt-2 min-w-48 rounded-lg ${menuBg} ${menuText} shadow-xl sm:hidden z-50`}>
+        <div className={`absolute top-full right-0 mt-2 min-w-48 rounded-lg ${menuBg} ${menuText} shadow-xl sm:hidden z-[100]`}>
           <div className="flex flex-col p-3 gap-1">
             {items.map((item, i) => (
               <a 
