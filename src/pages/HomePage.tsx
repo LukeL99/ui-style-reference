@@ -301,7 +301,7 @@ export const HomePage = () => {
             </div>
             <div className="flex gap-6 pt-2">
               <a
-                href="https://github.com/nextlevelbuilder/ui-ux-pro-max-skill"
+                href="https://github.com/Farad-Labs/ui-style-reference"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-white transition-colors text-sm"
