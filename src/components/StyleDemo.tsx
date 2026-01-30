@@ -2072,13 +2072,13 @@ const NeubrutalismDemo = ({ }: StyleDemoProps) => (
           { title: 'CSS Container Queries Are Here!', tag: 'NEWS', color: 'bg-orange-400' },
           { title: 'Why Every Dev Should Learn SQL', tag: 'OPINION', color: 'bg-purple-400' },
         ].map((article, i) => (
-          <article key={i} className={`${article.color} p-6 border-4 border-black flex justify-between items-center`}
+          <article key={i} className={`${article.color} p-4 sm:p-6 border-4 border-black flex justify-between items-center gap-3`}
             style={{ boxShadow: '6px 6px 0 #000' }}>
-            <div>
-              <span className="px-2 py-1 bg-black text-white text-xs font-bold mr-3">{article.tag}</span>
-              <span className="text-xl font-black">{article.title}</span>
+            <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-3 min-w-0">
+              <span className="px-2 py-1 bg-black text-white text-xs font-bold shrink-0 w-fit">{article.tag}</span>
+              <span className="text-lg sm:text-xl font-black leading-tight">{article.title}</span>
             </div>
-            <span className="text-2xl">→</span>
+            <span className="text-2xl shrink-0">→</span>
           </article>
         ))}
       </div>

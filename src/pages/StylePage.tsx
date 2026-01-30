@@ -133,8 +133,8 @@ export const StylePage = () => {
                     className="w-full aspect-square rounded-xl shadow-md mb-2 border border-gray-200"
                     style={{ backgroundColor: color.includes('rgba') ? color : color }}
                   />
-                  <span className="text-xs font-mono text-gray-600">
-                    {color.length > 15 ? color.slice(0, 15) + '...' : color}
+                  <span className="text-xs font-mono text-gray-600 break-all leading-tight block">
+                    {color}
                   </span>
                 </div>
               ))}
