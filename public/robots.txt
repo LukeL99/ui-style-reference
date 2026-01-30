@@ -1,0 +1,11 @@
+# robots.txt for UI Style Guide
+# https://www.uistyleguide.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.uistyleguide.com/sitemap.xml
+
+# Crawl-delay (optional, be nice to servers)
+Crawl-delay: 1
