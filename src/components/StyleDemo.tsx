@@ -2508,7 +2508,7 @@ const MemphisDemo = ({ }: StyleDemoProps) => (
     <div className="absolute top-40 right-20 w-20 h-20" style={{ background: '#FFCE5C', transform: 'rotate(45deg)' }} />
     <div className="absolute bottom-40 left-1/4 w-0 h-0" style={{ borderLeft: '40px solid transparent', borderRight: '40px solid transparent', borderBottom: '70px solid #86CCCA' }} />
     <div className="absolute top-1/2 right-10 w-16 h-40" style={{ background: 'repeating-linear-gradient(45deg, #000, #000 5px, transparent 5px, transparent 10px)' }} />
-    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8 relative z-10">
+    <header className="max-w-5xl mx-auto px-4 sm:px-8 py-8 relative z-50">
       <MobileNav
         logo={<h1 className="text-4xl font-black" style={{ color: '#6A7BB4' }}>SHAPES</h1>}
         items={[
